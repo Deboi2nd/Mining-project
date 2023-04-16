@@ -6,7 +6,6 @@ var gameData = {
 };
 
 var minerNumber = {
-    miner: 0,
     minerBoughtPerClick: 0,
 };
 

@@ -34,7 +34,7 @@ header {
 
 header img {
     max-height: 300px;
-    border: 5px #0a0f3e solid;
+    border: 5px darkgoldenrod solid;
     border-radius: 50%;
 }
 

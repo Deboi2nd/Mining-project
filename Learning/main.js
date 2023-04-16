@@ -1,8 +1,16 @@
+document.getElementById("perClickMiner").style.display = "none"
+document.getElementById("perClickUpgrade").style.display = "none"
+
 var gameData = {
     gold: 0,
     goldPerClick: 1,
-    goldPerClickCost: 10,
-    goldPerMiner: 50
+    goldPerClickCost: 50,
+    goldPerMiner: 100
+};
+
+function giveGold() {
+    gameData.gold += 1000
+    document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
 };
 
 var minerNumber = {
@@ -34,6 +42,7 @@ function buyMinerPerClick() {
         gameData.gold -= gameData.goldPerMiner
         minerNumber.minerBoughtPerClick += 1
         gameData.goldPerMiner *= 2
+        document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
         document.getElementById("perClickMiner").innerHTML = "Buy a Miner (Currently have " + minerNumber.minerBoughtPerClick + ") Cost: " + gameData.goldPerMiner + " Gold"
     }
 }
@@ -45,9 +54,20 @@ var minerLoop = window.setInterval(function() {
 }, 2000);
 
 
-// var mainGameLoop = window.setInterval(function() {
-//     mineGold()
-// }, 1000);
+
+
+var mainGameLoop = window.setInterval(function() {
+if(gameData.gold >= 100) {
+    document.getElementById("perClickMiner").style.display = "inline-block"
+}
+
+
+if(gameData.gold >= 50) {
+    document.getElementById("perClickUpgrade").style.display = "inline-block"
+}
+}, 1000);
+
+
 
 // var saveGameLoop = window.setInterval(function() {
 //     localStorage.setItem("goldMinerSave", JSON.stringify(gameData))

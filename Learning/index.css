@@ -3,6 +3,11 @@ html {
     font-family: 'Eagle Lake', cursive;
     font-size: 16px;
 }
+
+h1 {
+    font-size: 45px;
+}
+
 body{
     text-align: center;
 }
@@ -54,4 +59,25 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 10px solid darkgoldenrod;
+}
+
+#goldMined {
+    padding: 15px;
+    -webkit-text-stroke: 1px darkgoldenrod;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    background-color: gray;
+    color: gold;
+    margin: 8px;
+    padding: 10px;
 }

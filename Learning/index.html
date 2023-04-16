@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
     <title>Gold Miner</title>
 </head>
 <body>
-    <p id="goldMined">0 Gold Mined</p>
-    <button onclick="mineGold()">Mine Gold</button>
-    <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
-    <button onclick="buyMinerPerClick()" id="perClickMiner">Buy a Miner (Currently have 0) Cost: 50 Gold</button>
-    <script src="main.js" charset="utf-8" type="text/javascript"></script>
+    <header>
+        <img src="./resources/miner-logo.jpg">
+    </header>
+    <div class="mining-container">
+        <div class="mining">
+        <p id="goldMined">0 Gold Mined</p>
+            <div class="buttons">
+                <button onclick="mineGold()">Mine Gold</button>
+                <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
+                <button onclick="buyMinerPerClick()" id="perClickMiner">Buy a Miner (Currently have 0) Cost: 50 Gold</button>
+                <script src="main.js" charset="utf-8" type="text/javascript"></script>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

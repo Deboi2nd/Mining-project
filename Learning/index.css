@@ -8,10 +8,7 @@ h1 {
     font-size: 45px;
 }
 
-body{
-    text-align: center;
-}
-body::before {
+body::after {
     content: "";
     background-image: url(./resources/mine-background.jpg);
     background-repeat: no-repeat;
@@ -22,9 +19,10 @@ body::before {
     bottom: 0px;
     left: 0px;
     opacity: 0.65;
+    z-index: -1;
 }
 
-header {
+.logo {
     position: relative;
     display: flex;
     align-items: center;
@@ -32,7 +30,7 @@ header {
     margin: 20px;
 }
 
-header img {
+.logo img {
     max-height: 300px;
     border: 10px darkgoldenrod solid;
     border-radius: 50%;
@@ -67,7 +65,7 @@ header img {
     -webkit-text-stroke: 1px darkgoldenrod;
 }
 
-.buttons {
+.centre-box {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -76,7 +74,7 @@ header img {
     padding: 5px;
 }
 
-button {
+.centre-box button {
     background-color: #9c9c9c;
     color: black;
     box-shadow: none;
@@ -86,12 +84,85 @@ button {
     padding: 10px;
     font-size: 30px;
     -webkit-text-stroke: 0.5px darkgoldenrod;
+    transition: 0.3s;
 }
 
-button:hover {
+.centre-box button:hover {
     background-color: gray;
 }
 
-button:active {
+.centre-box button:active {
     background-color: #5a5959;
 }
+
+header span {
+    font-size: 40px;
+    cursor:crosshair;
+}
+
+.sidenav-style {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav-style p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: darkgoldenrod;
+    display: block;
+}
+  
+.sidenav-style a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: darkgoldenrod;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav-style a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav-style .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav-style button {
+    background-color: #C9CAA3;
+    color: black;
+    box-shadow: none;
+    border-radius: 0px;
+    border: 0;
+    margin: 8px;
+    padding: 10px;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.sidenav-style button:hover {
+    background-color: #97987A;
+}
+
+.sidenav-style button:active {
+    background-color: #656552;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav-style {padding-top: 15px;}
+    .sidenav-style a {font-size: 18px;}
+  }

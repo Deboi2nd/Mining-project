@@ -12,20 +12,30 @@
 </head>
 <body>
     <header>
-        <img src="./resources/miner-logo.jpg">
+        <span onclick="openNav()">&#9776; open</span>
+    <div id="sideNav" class="sidenav-style">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p>Store</p>
+        <button onclick="giveGold()" id="cheatGold">Give 1000 Gold</button>
+        <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 50 Gold</button>
+        <button onclick="buyMinerPerClick()" id="perClickMiner">Buy a Miner (Currently have 0) Cost: 100 Gold</button>
+        <button onclick="buyBetterPickaxe()" id="pickaxeUpgrade">Upgrade pickaxes for your miners Cost: 300 Gold</button>
+        <a href="#">Stuff</a>
+        <a href="#">Goes</a>
+        <a href="#">Here</a>
+    </div>
     </header>
+    <div class='logo'>
+        <img src="./resources/miner-logo.jpg">
+    </div>
     <div class="mining-container">
         <div class="mining">
-        <h1 id="goldMined">0 Gold Mined</h1>
-            <div class="buttons">
-                <button onclick="mineGold()">Mine Gold</button>
-                <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 50 Gold</button>
-                <button onclick="buyMinerPerClick()" id="perClickMiner">Buy a Miner (Currently have 0) Cost: 100 Gold</button>
-                <button onclick="buyBetterPickaxe()" id="pickaxeUpgrade">Upgrade pickaxes for your miners Cost: 300 Gold</button>
-                <button onclick="giveGold()" id="cheatGold">Give 1000 Gold</button>
-                <script src="main.js" charset="utf-8" type="text/javascript"></script>
-            </div>
+            <h1 id="goldMined">0 Gold Mined</h1>
+                <div class="centre-box">
+                    <button onclick="mineGold()">Mine Gold</button>
+                </div>
         </div>
     </div>
+    <script src="main.js" charset="utf-8" type="text/javascript"></script>
 </body>
 </html>

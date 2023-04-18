@@ -89,6 +89,18 @@ function buyBetterPickaxe() {
     }
 };
 
+// Sidenav stuff
+
+function openNav() {
+    document.getElementById("sideNav").style.width = "400px";
+}
+
+function closeNav() {
+    document.getElementById("sideNav").style.width = "0";
+}
+
+// Save and Load Data
+
 // var saveGameLoop = window.setInterval(function() {
 //     localStorage.setItem("goldMinerSave", JSON.stringify(gameData))
 //   }, 15000)

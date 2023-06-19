@@ -1,4 +1,3 @@
-
 html {
     font-family: 'Eagle Lake', cursive;
     font-size: 16px;
@@ -6,6 +5,10 @@ html {
 
 h1 {
     font-size: 45px;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 body::after {
@@ -36,7 +39,9 @@ body::after {
     border-radius: 50%;
 }
 
-.mining {
+/* Main */
+
+.mining, .instructions {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -45,7 +50,7 @@ body::after {
     justify-content: center;
 }
 
-.mining-container {
+.mining-container, .instruction-container {
     position: relative;
     background-image: url('./resources/paper.jpg');
     background-repeat: no-repeat;
@@ -58,12 +63,24 @@ body::after {
     align-items: center;
     justify-content: center;
     border: 10px solid darkgoldenrod;
+    padding: 20px;
 }
 
-#goldMined {
+#goldMined, .instructions h2 {
     padding: 15px;
     -webkit-text-stroke: 1px darkgoldenrod;
 }
+
+.instructions ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Div for buttons */
 
 .centre-box {
     display: flex;
@@ -94,6 +111,8 @@ body::after {
 .centre-box button:active {
     background-color: #5a5959;
 }
+
+/* Header/side-nav */
 
 header span {
     font-size: 40px;
@@ -161,6 +180,7 @@ header span {
     background-color: #656552;
 }
 
+/* Media queries */
 
 @media screen and (max-height: 450px) {
     .sidenav-style {padding-top: 15px;}

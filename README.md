@@ -4,10 +4,10 @@ This is a simple incremental game made by Deboi and [Skell](https://github.com/F
 
 ## How to Play
 
-1. Click main button to mine gold
-2. Once you have 50 gold, you can buy a pickaxe to mine faster.
-3. Once you have 100 gold, you can buy a miner to manually mine gold for you.
-4. To buy, the store is in the side nav.
+1. Click main button to mine gems
+2. Once you have 50 gems, you can buy a pickaxe to mine faster.
+3. Once you have 100 gems, you can buy a miner to manually mine gems for you.
+4. At 300 Gems, you can buy a miner a pickaxe to help you mine Gems easier.
 
 ## Future Installments
 

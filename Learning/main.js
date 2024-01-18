@@ -11,7 +11,7 @@ var gameData = {
 
 function giveGold() {
     gameData.gold += 1000
-    document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+    document.getElementById("goldMined").innerHTML = gameData.gold + " Gems Mined"
 };
 
 var minerNumber = {
@@ -21,12 +21,12 @@ var minerNumber = {
 
 function minerMineGold () {
     gameData.gold += minerNumber.minerBoughtPerClick
-    document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+    document.getElementById("goldMined").innerHTML = gameData.gold + " Gems Mined"
 };
 
 function mineGold() {
     gameData.gold += gameData.goldPerClick
-    document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+    document.getElementById("goldMined").innerHTML = gameData.gold + " Gems Mined"
 };
 
 function buyGoldPerClick() {
@@ -34,8 +34,8 @@ function buyGoldPerClick() {
         gameData.gold -= gameData.goldPerClickCost
         gameData.goldPerClick += 1
         gameData.goldPerClickCost *= 2
-        document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
-        document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Current Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+        document.getElementById("goldMined").innerHTML = gameData.gold + " Gems Mined"
+        document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Current Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gems"
     }
 };
 
@@ -45,8 +45,8 @@ function buyMinerPerClick() {
         Math.floor(minerNumber.miner += 1)
         minerNumber.minerBoughtPerClick += 1
         gameData.goldPerMiner *= 2
-        document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
-        document.getElementById("perClickMiner").innerHTML = "Buy a Miner (Currently have " + minerNumber.miner + ") Cost: " + gameData.goldPerMiner + " Gold"
+        document.getElementById("goldMined").innerHTML = gameData.gold + " Gems Mined"
+        document.getElementById("perClickMiner").innerHTML = "Buy a Miner (Currently have " + minerNumber.miner + ") Cost: " + gameData.goldPerMiner + " Gems"
     }
 }
     
@@ -84,20 +84,10 @@ function buyBetterPickaxe() {
     if (gameData.gold >= upgrades.betterPickaxe) {
         gameData.gold -= upgrades.betterPickaxe
         minerNumber.minerBoughtPerClick *= 1.25
-        document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+        document.getElementById("goldMined").innerHTML = gameData.gold + " Gems Mined"
         upgrades.betterPickaxe = true
     }
 };
-
-// Sidenav stuff
-
-function openNav() {
-    document.getElementById("sideNav").style.width = "400px";
-}
-
-function closeNav() {
-    document.getElementById("sideNav").style.width = "0";
-}
 
 // Save and Load Data
 
